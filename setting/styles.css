@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	font-family: 'Josefin Sans',sans-serif;
+
+}
+
+body{
+	background: #f3f3f3;
+}
+
+.wrap{
+	position: absolute;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	width: 450px;
+	display: flex;
+	box-shadow: 0 1px 20px 0 rgba(69,90,100,0.08)
+}
+
+.wrap .left{
+	width: 35%;
+	background: linear-gradient(to right,#01a9ac,#01dbdf);
+	padding: 30px 25px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	text-align: center;
+	color: #fff; 
+}
+
+.wrap .left img{
+	margin-bottom: 10px;
+	border-radius: 5px;
+}
+
+.wrap .left h4{
+	margin-bottom: 10px;
+}
+
+.wrap .left p{
+	font-size: 12px;
+}
+
+.wrap .right{
+	width: 65%;
+	background: #fff; 
+	padding: 30px 25px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.wrap .right .info,
+.wrap .right .projects{
+	margin-bottom: 25px;
+}
+
+.wrap .right .info h3,
+.wrap .right.projects h3{
+	margin-bottom: 15px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #e0e0e0;
+	color:#353c4e;
+	text-transform: uppercase;
+	letter-spacing: 5px; 
+}
+
+.wrap .right .info_d .data h4,
+.wrap .right .pro_d .data h4{
+	color: #353c4e;
+	margin-bottom: 5px;
+}
+
+.wrap .right .info_d .data p,
+.wrap .right .pro_d .data p{
+	color: #919aa3; 
+	margin-bottom: 10px;
+	font-size: 13px;
+}
+
+.wrap .social_media ul{
+	display: flex;
+}
+
+.wrap .social_media ul li{
+	width:45px;
+	height: 45px; 
+	background: linear-gradient(to right,#01a9ac,#01dbdf);
+	margin-right: 10px;
+	border-radius: 5px;
+	line-height: 45px;
+	text-align: center;
+}
+
+.wrap .social_media ul li a{
+	color:#fff;
+	display:block;
+	font-size: 18px;
+}

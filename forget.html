@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login V1</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Adamina&display=swap" rel="stylesheet">
+	
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<centre>
+                <form class="login100-form validate-form">
+					<span class="login100-form-title">
+						Forgot Password
+					</span>
+                    
+					<div class="wrap-input100 validate-input" >
+						<input class="input100" type="text" id="email" name="email" placeholder="Email">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" ></i>
+						</span>
+					</div>
+
+					
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn" onclick="forgot()">
+							Submit
+						</button>
+					</div>
+
+					<div class="text-center p-t-12">
+						<span class="txt1">
+							Create a new account
+						</span>
+						<a class="txt2" href="signup.html">
+							signup
+						</a>
+					</div>
+
+					
+                </form>
+                </centre>
+			</div>
+		</div>
+	</div>
+	
+	
+
+
+
+
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+	  
+		<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+	  
+		<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+		<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
+	  
+		<!-- Add Firebase products that you want to use -->
+		<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
+
+
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+              apiKey: "AIzaSyA6RUS2lQJQoietE5ub9SgYLVBKCyqj7ds",
+              authDomain: "webapp-1b5e8.firebaseapp.com",
+              databaseURL: "https://webapp-1b5e8.firebaseio.com",
+              projectId: "webapp-1b5e8",
+              storageBucket: "webapp-1b5e8.appspot.com",
+              messagingSenderId: "687346806413",
+              appId: "1:687346806413:web:a65957be89cf3c799b7cc4",
+              measurementId: "G-C4LQLG2G5V"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+            
+          </script>
+
+<script>
+	
+	
+	function forgot(){
+		var auth = firebase.auth();
+		var email=document.getElementById("email").value;
+
+	
+	//Create User with Email and Password
+	auth.sendPasswordResetEmail(email).catch(function(error) {
+  // An error happened.
+  alert(error);
+});
+	}
+
+
+</script>
+
+
+
+
+
+
+	
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>

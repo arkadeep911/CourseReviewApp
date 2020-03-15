@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>course review</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+      .view{
+    
+   
+    padding: 10px;
+    margin:10px;
+
+}
+.goto{
+    margin:10px;
+   
+    display: block
+}
+.back{
+    border-radius:50%;
+    background-color: yellow;
+}
+
+.fa {
+  font-size: 20px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+  </style>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+    <div class="site-wrap" style="background-color: #000000">
+
+
+    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner" style="background-color: #000000">
+        <div class="container">
+        <div class="d-flex align-items-center">
+<div class="site-logo">
+    
+            <a href="index.html" class="d-block">
+                <img src="images/download.png" alt="Image" class="img-fluid" height="150px" width="250px">
+            </a>
+          </div>
+      <div class="mr-auto">
+        <nav class="site-navigation position-relative text-right" role="navigation">
+          <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+            <li>
+              <a href="index.html" class="nav-link text-left">Home</a>
+            </li>
+           
+            <li >
+              <a href="about.html" class="nav-link text-left">About Us</a>
+              
+            </li>
+            <li>
+              <a href="settings.html" class="nav-link text-left">Settings</a>
+            </li>
+            <li>
+                <a href="helpline.html" class="nav-link text-left">Help</a>
+              </li>
+            <li>
+              <a href="search.html" class="nav-link text-left">Search</a>
+            </li>
+        
+              <li>
+                <a href="logout.html" class="nav-link text-left">Log out</a>
+              </li>
+          </ul>                                                                                                                                                                                                                                                                                          </ul>
+        </nav>
+      </div>
+          <div class="ml-auto">
+            <div class="social-wrap">
+             
+              <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span
+                class="icon-menu h3"></span></a>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+            </header>
+
+  </div>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+     <script src="js/aos.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+ <script src="js/main.js"></script>
+ 
+ <div>
+  <h1 style="padding-top: 170px;font-size:50px; color: #012F52;text-align: center; ">
+            <strong> Questions</strong>
+        </h1>
+     
+     
+    <div >
+      <div class="container">
+        <div class="row align-items-end">
+          <div class="col-lg-7">
+            
+          </div>
+        </div>
+      </div>
+    </div> 
+
+    
+    <div class="site-section">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6 form-group">
+                  <label for="fname">Ask Question</label>
+                  <input type="text" id="fname" class="form-control form-control-lg">
+              </div>
+              <div class="col-12">
+                <input type="submit" value="Submit"onclick="hehe()"  class="btn btn-primary btn-lg px-5">
+            </div>
+              
+          </div>
+  
+          
+
+          
+      </div>
+  </div>
+
+     
+ </div>
+ 
+ 
+
+
+ <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+
+ <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+ <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
+
+
+
+<script>
+
+
+
+
+
+
+  function hehe(){
+    var que=document.getElementById("fname").value;
+    if (document.getElementById("fname").value == null ||  
+    document.getElementById("fname").value == undefined || 
+    document.getElementById("fname").value.length == 0) {
+      alert("Please write a Question and then click on submit")
+    }
+    else{
+    db.collection("questions").doc("deep").set({
+    ques:que
+})
+.then(function() {
+  alert("Question Successfully Asked");
+    console.log("Document successfully written!");
+})
+.catch(function(error) {
+  alert(error);
+    console.error("Error writing document: ", error);
+});
+  }
+}
+</script>
+
+
+
+
+
+
+
+ <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBmf8J7NJR7Z8owPNm50XlMWNwEux-VWAQ",
+    authDomain: "arka-1dd7d.firebaseapp.com",
+    databaseURL: "https://arka-1dd7d.firebaseio.com",
+    projectId: "arka-1dd7d",
+    storageBucket: "arka-1dd7d.appspot.com",
+    messagingSenderId: "898151988212",
+    appId: "1:898151988212:web:29bd7462a703b9dfc057a1",
+    measurementId: "G-7532T0ELY6"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  var db = firebase.firestore();
+  
+</script>
+
+
+
+
+
+
+
+</body>
+
+</html>
